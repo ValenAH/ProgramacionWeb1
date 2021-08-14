@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<style>
+    .Contenedor{
+        display: flex;
+        justify-content: space-around;
+    }
+    button{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <div>
+        <label for="Nombre">Nombre: </label>
+        <input type="text" id="Nombre">
+        <input type="date">
+    </div>
+
+    <div class="Contenedor">
+        <div>
+            <h2>Tipo</h2>
+            <input type="radio" id="Mercado1">
+            <label for="Mercado1">Mercado 1</label>
+            <br>
+            <input type="radio" id="Mercado2">
+            <label for="Mercado2">Mercado 2</label>
+            <br>
+            <input type="radio" id="Mercado3">
+            <label for="Mercado3">Mercado 3</label>
+        </div>
+        <div>
+            <h2>Forma de envío</h2>
+            <input type="checkbox" id="Recoger">
+            <label for="Recoger">Recoger</label>
+            <br>
+            <input type="checkbox" id="Domicilio">
+            <label for="Domicilio">Recoger</label>
+            <br>
+            <input type="checkbox" id="Consumir">
+            <label for="Consumir">Consumir</label>
+        </div>
+        
+    </div>
+    <button>Enviar</button>
+    
+</body>
+</html>
