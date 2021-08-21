@@ -1,0 +1,177 @@
+/*VARIABLES*/
+:root{
+    --ColorPrimario:rgb(185, 235, 238);
+    --ColorSecundario: rgb(11, 230, 241);
+    --ColorTitulos:rgb(0, 0, 0);
+    --ColorTexto: rgb(92, 92, 92);
+    --TipoTexto: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--TipoTexto);
+}
+.encabezado{
+    width: 100%;
+    margin: 20px 0px;
+    padding: 1px 70px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--ColorPrimario);
+    align-items: center;
+    box-shadow: 10px 0px 15px  rgb(175, 173, 173);
+}
+.izquierda{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.encabezado i{
+    justify-self: right;
+    cursor: pointer;
+    color: var(--ColorTitulos);
+    display: right;
+    float: right;
+    font-size: 30px;
+    transform: all 0.5s;
+}
+
+.encabezado i:hover{
+    color: var(--ColorSecundario);
+}
+
+.nombre{
+    padding: 20px;
+    float: left;
+    color: var(--ColorTitulos);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 30;
+}
+
+.foto img{
+    width: 120px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 20%;
+    float: left;
+}
+
+/*INFORMACION PRINCIPAL*/
+.informacionPrincipal{
+    display: flex;
+}
+
+.informacionPersonal{
+    width: 40%;
+    min-width: 300px;
+    max-height: 320px;
+    margin: 5% 5%;
+    padding: 30px;
+    color: var(--ColorTexto);
+    display:ruby-text;
+    box-shadow: 0px 0px 20px  rgb(175, 173, 173);
+    border-radius: 20px;
+}
+
+.informacionPersonal i{
+    color: var(--ColorPrimario);
+    padding: 10px;
+}
+
+.informacionPersonal i:hover{
+    color: var(--ColorSecundario);
+}
+.informacionPersonal h1{
+    color: var(--ColorTitulos);
+    text-align: center;
+    font-size: 30px;
+}
+
+.educacion{
+    width: 70%;
+    margin: 5%;
+    padding: 30px;
+    color: var(--ColorTexto);
+    display:ruby-text;
+    box-shadow: 0px 0px 20px  rgb(175, 173, 173);
+    border-radius: 20px;
+}
+
+.educacion i{
+    color: var(--ColorPrimario);
+    padding: 10px;
+}
+
+.educacion i:hover{
+    color: var(--ColorSecundario);
+}
+.educacion h1{
+    color: var(--ColorTitulos);
+    text-align: center;
+    font-size: 30px;
+}
+
+.educacion h2{
+    color: var(--ColorSecundario);
+    font-size: 15px;
+    padding-left: 40px;
+    font-style: italic;
+    font-weight: 1px;
+}
+
+.perfilProfesional{
+    width: 100%;   
+    margin: 0; 
+    padding: 10px 30px;
+    background-color: var(--ColorPrimario);
+    justify-content: right;
+    display: flex;
+    flex-flow: column;
+
+}
+
+.texto{
+    margin: 20px 20%;
+    padding: 20px 40px;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 0px 0px 20px  rgb(175, 173, 173);
+    border-radius: 20px;
+}
+
+.texto h1{
+    text-align: center;
+}
+
+.texto p{
+    text-align: justify;
+    color: var(--ColorTexto);
+}
+
+.habilidadesTitle{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+}
+
+.habilidades{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.contenedor{
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px  rgb(175, 173, 173);
+    border-radius: 20px;
+}
+
+
+
+

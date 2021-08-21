@@ -1,0 +1,214 @@
+HTML
+
+<!--MENÚ PRINCIPAL-->
+    <div class="menu-principal">
+        <div class="logo" id="logo">
+            <img src="../imagenes/Logo.PNG" alt="Logo">
+        </div>
+
+        <div class="menu-bar" id="menuBar">
+            <i class="fas fa-angle-double-right menuClose" id="btnMenuClose"></i>
+
+            <nav class="enlaces" id="enlaces">
+                <ul>
+                    <li><a href="">Servicios</a></li>
+                    <li><a href="">Equipo</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="sociales">
+                <a href=""><span class="fab fa-facebook"></span></a>
+                <a href=""><span class="fab fa-instagram"></span></a>
+                <a href=""><span class="fab fa-twitter"></span></a>
+                <a href=""><span class="fab fa-youtube"></span></a>
+            </div>
+        </div>
+
+        <i class="fas fa-bars" id="btnMenuOpen"></i>
+
+    </div>
+
+
+
+
+
+    <button class="btn">Boton <span class="fas fa-angle-double-right"></span></button>
+
+    <script src="../JavaScript/app.js"></script>
+
+
+CSS3
+/*VARABLES*/
+:root{
+    --color-primario: #4975af;
+    --color-secundario: #1683dc;
+    --color-background: #f1f3f5;
+    --color-texto: #59585f;
+    --text-default: 'Open Sans', sans-serif;
+}
+
+/*GENERALES*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--text-default);
+}
+
+body{
+    background: var(--color-background);
+}
+
+.titulos{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.subtitulos{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primario);
+}
+
+.btn{
+    text-decoration: none; /*Para que no se vea el lnk*/
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    background: var(--color-primario);
+    font-weight: 700;
+    padding: 15px 30px;
+    outline: none;
+    border: var(--color-primario);
+    cursor: pointer;
+    position: relative;/*Para que se separe el boton de los demás elementos*/
+    top: 20px;
+    transition: all 0.3s;
+}
+
+.btn span{
+    padding-left: 10px;
+}
+
+.btn:hover{
+    padding: 15px 45px; /*cuando paso el cursor se amplian los botones*/
+
+}
+
+
+
+/*MENU PRINCIPAL*/
+.menu-principal{
+    width: 100%;
+    display: flex; /*Los elementos aparecen uno al lado del otro*/
+    justify-content: space-between;
+    align-items: center; /*centrar en el eje vertical*/
+    height: 75px;
+    padding: 0 30px;
+    margin-top: 10px;
+    background: var(--color-background);
+    z-index: 1; /*eje tridimensional, el menu va más adelante que todo lo demás*/
+}
+
+.logo img{
+    width: 130px;
+    cursor: pointer;
+}
+
+.menu-bar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;  
+}
+
+.menu-bar .enlaces ul li{
+    display: inline-block;/*Me pone los elementos de la lista uno al lado del otro*/
+    padding: 0 10px;
+}
+
+@media screen and (max-width: 650px){
+    .menu-principal{
+        position: fixed; /*Para que este fijo siempre*/
+        top: 0; /*Para que este en la parte superior*/
+    }
+    
+    .menu-principal i{
+        display: block; /* Cuando llegue a 650px se van a mostrar los elementos*/
+    }
+
+    .menu-bar{
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;/*Para que aparezca uno al lado del otro*/
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        right: 0;
+        top: 0%;
+        z-index: 1000;/*Para asegurarse que este elemento este por delante de cualquier otro*/
+        background: #333;
+        transition: all 1s;
+        transform: translateX(100%);
+    }
+
+    .menu-bar.active{
+        transform: translateX(0%);
+    }
+
+    .menu-bar i{
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+
+    .menu-bar .enlaces ul li{
+        display: block; /*Para que aparezcan los enlaces uno abajo del otro*/
+        padding: 20px 10px;
+        text-align: center;
+    }
+    .menu-bar .enlaces ul li a,
+    .menu-bar .sociales a{
+        font-size: 20px;
+        color: var(--color-background);
+
+    }
+}
+
+
+flex-flow: column wrap; Pa que se despliegue hacia abajo
+
+/* ESTILOS MEDIA QUERY */
+
+        /* Desde 1000px hacia arriba */
+        @media screen and (min-width: 1000px){
+            div:nth-child(1){
+                background: rgb(0, 0, 0);
+            }
+        }
+        
+        /* Desde 700px hacia abajo */
+        @media screen and (max-width: 700px){
+            div{
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+        /* Rango entre 1000px hasta 640px */
+        @media screen and (max-width: 1000px) and (min-width: 600px){
+            div:nth-child(2){
+                background: rgb(118, 119, 119);
+            }
+
+            div{
+                width: 50%;
+                margin-top: 0;
+            }
+            
+        }
