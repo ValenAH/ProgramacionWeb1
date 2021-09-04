@@ -64,16 +64,14 @@
 /*INFORMACION PRINCIPAL*/
 .informacionPrincipal{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .informacionPersonal{
     width: 40%;
-    min-width: 300px;
-    max-height: 320px;
-    margin: 5% 5%;
+    margin: 25px 25px;
     padding: 30px;
     color: var(--ColorTexto);
-    display:ruby-text;
     box-shadow: 0px 0px 20px  rgb(175, 173, 173);
     border-radius: 20px;
 }
@@ -93,11 +91,12 @@
 }
 
 .educacion{
-    width: 70%;
-    margin: 5%;
+    width: 50%;
+    max-width: 720px;
+    min-width: 400px;
+    margin: 25px;
     padding: 30px;
     color: var(--ColorTexto);
-    display:ruby-text;
     box-shadow: 0px 0px 20px  rgb(175, 173, 173);
     border-radius: 20px;
 }
@@ -127,7 +126,7 @@
 .perfilProfesional{
     width: 100%;   
     margin: 0; 
-    padding: 10px 30px;
+    padding: 10px 10px;
     background-color: var(--ColorPrimario);
     justify-content: right;
     display: flex;
@@ -162,7 +161,7 @@
 .habilidades{
     display: flex;
     justify-content: space-around;
-    
+    flex-wrap: wrap;  
 }
 
 .contenedor{
@@ -172,6 +171,70 @@
     border-radius: 20px;
 }
 
+.herramientasOfimaticas{
+    width: 25%;
+    justify-content: center;
+}
 
+.ofimToolsTitle{
+    text-align: center;
+}
+
+.ofimToolsIcons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.programacionTitle{
+    text-align: center;    
+}
+
+.programacion{
+    width: 50%;
+}
+
+.progIconos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.programacion .container{
+    margin: 10px;
+    width: 40%;
+    padding: 0px 20px;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .informacionPersonal{
+        width: 100%;
+        margin: 15px;
+    }
+    .educacion{
+        width: 100%;
+        margin: 15px;
+    }
+    .perfilProfesional{
+        width: 100%;
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .herramientasOfimaticas{
+        width: 100%;
+    }
+
+    .ofimToolsIcons{
+        flex-direction: row;
+    }
+
+    .programacion{
+        width: 100%;
+    }
+}
 
 
