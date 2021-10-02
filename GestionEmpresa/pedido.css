@@ -1,0 +1,35 @@
+:root{
+    --colorPrimario: rgb(113, 157, 238);
+    --colorSombra: rgb(172, 198, 231);
+}
+body{
+    margin: 0px;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 10px 50px 20px var(--colorSombra);
+}
+
+header img{
+    width: 80px;
+    height: 5em;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+main td{
+    margin-right: 10px;
+    padding-right: 100px;
+    width: 100px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid var(--colorPrimario);
+}
